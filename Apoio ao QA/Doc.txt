@@ -1,0 +1,46 @@
+Documentação do Código
+Abaixo está a documentação do código da solução implementada, explicando cada parte com detalhes.
+
+1. Estrutura do Projeto
+bash
+Copiar código
+qa-test-generator/
+├── index.html      # Estrutura principal da interface web
+├── style.css       # Estilos da página
+├── script.js       # Lógica do frontend para comunicação com o backend
+└── server.js       # Servidor backend em Node.js
+
+2. Arquivo: index.html
+Descrição: Contém a estrutura HTML da aplicação.
+
+Componentes principais:
+Um <textarea> para o usuário inserir a história de usuário.
+Um botão <button> que dispara a lógica para envio da história ao backend.
+Uma <div> para exibir os resultados gerados pela API.
+
+3. Arquivo: style.css
+Descrição: Define o estilo visual da interface.
+
+Elementos estilizados:
+.container: Centraliza e estiliza a área principal da página.
+textarea: Define o campo de entrada com bordas e padding.
+button: Cria um botão interativo com efeitos de hover.
+.output-area: Estiliza a área onde os cenários gerados são exibidos.
+
+4. Arquivo: script.js
+Descrição: Lógica do frontend para enviar a história de usuário ao backend.
+
+Função submitStory:
+Valida a entrada do usuário (não permite envio de texto vazio).
+Faz uma requisição HTTP POST ao backend usando fetch().
+Exibe os cenários retornados ou mensagens de erro.
+
+5. Arquivo: server.js
+Descrição: Servidor Node.js que gerencia a comunicação com a API da OpenAI.
+
+Principais funções:
+Recebe requisições do frontend na rota /api/generate.
+Valida se a história de usuário foi enviada.
+Faz uma requisição à API da OpenAI e retorna os cenários gerados para o frontend.
+Segurança:
+A chave da API é mantida segura no backend, evitando exposição no frontend.

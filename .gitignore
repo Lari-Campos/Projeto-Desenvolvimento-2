@@ -1,0 +1,34 @@
+# Arquivos de ambiente
+
+.env
+
+# Diretórios de dependências
+
+node_modules/
+
+# Arquivos de log
+
+*.log
+
+# Arquivos do sistema operacional
+
+.DS_Store
+Thumbs.db
+
+# Ignorar logs e arquivos de depuração
+
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar diretórios de compilação ou distribuição
+
+/dist/
+/build/
+
+# Ignorar arquivos de IDEs
+
+.vscode/
+.idea/
+
